@@ -18,7 +18,6 @@
   "SoftwareVersion": "Software version",
   "DeadNodes": "Dead nodes",
   "DecomNodes": "Decom nodes",
-  "EnteringMaintenanceNodes": "Entering maintenance nodes",
   "NodeUsage": "Node Usage",
   "NNStartedTimeInMillis": "NameNode started time in millis",
   "CorruptFiles": "Corrupt file list"
