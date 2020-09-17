@@ -408,7 +408,8 @@ class NameNodeMetricCollector(MetricCollector):
                         item = re.sub('([a-z0-9])([A-Z])', r'\1_\2', item).lower()
                         key = "LiveNodes-" + item
                         self.hadoop_namenode_metrics["NameNodeInfo"][key].add_metric(label, value)
-                self.dns = dns
+                if not self.dns:
+                    self.dns = dns
             elif "DeadNodes" in metric and "DeadNodes" in bean:
                 dead_node_dict = yaml.safe_load(bean["DeadNodes"])
                 self.hadoop_namenode_metrics["NameNodeInfo"]["DeadNodeCount"].add_metric([self.cluster, self.target], len(dead_node_dict))
